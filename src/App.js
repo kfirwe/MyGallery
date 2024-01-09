@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Gallery from './Gallery';
+import img1 from './images/007.png';
+import img2 from './images/italy.jpg';
+import img3 from './images/lambo.jpg';
 
-function App() {
+const App = () => {
+  const images = [
+    img1,
+    img2,
+    img3,
+    // Add more image URLs as needed
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Gallery images={images} />
     </div>
   );
-}
+};
 
 export default App;
